@@ -55,7 +55,7 @@ public class ControllerMain
 
             if (galutinis < pradinis)
             {
-                Alert alert = new Alert(Alert.AlertType.NONE, "Galutinis skaičius turi būti mažesnis už pradinį", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.NONE, "Galutinis skaičius turi būti didesnis už pradinį", ButtonType.OK);
                 alert.showAndWait();
 
                 if (alert.getResult() == ButtonType.OK) {
@@ -110,7 +110,7 @@ public class ControllerMain
     private void baigtiSkaiciuoti(ActionEvent event)
     {
         thread.interrupt();
-        spausdintiIFaila("Skaičiavimo buvo nutrauktas.");
+        spausdintiIFaila("Skaičiavimas buvo nutrauktas.");
         pirmas = true;
     }
 
